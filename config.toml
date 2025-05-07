@@ -1,0 +1,4 @@
+[[customizations.user]]
+name = "summit"
+password = "2025"
+groups = ["wheel"]
