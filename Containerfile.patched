@@ -1,0 +1,3 @@
+FROM quay.io/centos-bootc/centos-bootc:stream10
+
+COPY ./login_banner.patched.txt /usr/etc/motd
