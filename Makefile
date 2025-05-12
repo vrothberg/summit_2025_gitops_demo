@@ -32,3 +32,11 @@ disk-image:
 		--local \
 		--use-librepo \
 		$(OCI_IMAGE)
+
+.PHONY: boot
+boot:
+	qemu-system-x86_64 -enable-kvm \
+		-m 4096 -M accel=kvm \
+		-cpu host -smp 2 \
+		-nographic \
+		-hda ./output/qcow2/disk.qcow2
